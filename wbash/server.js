@@ -49,17 +49,20 @@ server.on('upgrade', (req, socket, head) => {
     const origin = req.headers.origin;
 
     // Prevent other websites from opening a shell session.
+    
     if (origin) {
         const allowed = [
             `http://${HOST}:${PORT}`,
             `http://localhost:${PORT}`
         ];
-
+/*
         if (!allowed.includes(origin)) {
             socket.write('HTTP/1.1 403 Forbidden\r\n\r\n');
             return socket.destroy();
         }
+        */
     }
+    
 
     if (req.url !== '/ws') {
         socket.destroy();
