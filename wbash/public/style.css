@@ -1,0 +1,144 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: dark;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    color: #ddd;
+    font-family: "Roboto Mono", "Courier New", monospace;
+}
+
+.terminal {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    background: #000;
+}
+
+header {
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 13px;
+    background: #101010;
+    border-bottom: 1px solid #222;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #eee;
+}
+
+.brand-icon {
+    color: #00e676;
+    font-weight: bold;
+}
+
+.connection {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #888;
+}
+
+#status-dot {
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: #ff5252;
+}
+
+#status-dot.connected {
+    background: #00e676;
+}
+
+main {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 12px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.welcome {
+    margin-bottom: 12px;
+    color: #888;
+}
+
+.green {
+    color: #00e676;
+}
+
+.output-line {
+    color: #ddd;
+}
+
+.error {
+    color: #ff5252;
+}
+
+#terminal-form {
+    display: flex;
+    align-items: center;
+    padding: 11px;
+    gap: 9px;
+    border-top: 1px solid #222;
+}
+
+.prompt {
+    color: #00e676;
+    white-space: nowrap;
+}
+
+#command {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-family: inherit;
+    font-size: 16px;
+    caret-color: #00e676;
+}
+
+footer {
+    display: flex;
+    gap: 4px;
+    padding: 7px 4px;
+    background: #111;
+    border-top: 1px solid #222;
+}
+
+footer button {
+    flex: 1;
+    min-width: 0;
+    padding: 11px 2px;
+    border: 0;
+    border-radius: 4px;
+    background: #242424;
+    color: #ddd;
+    font-family: inherit;
+    font-size: 11px;
+}
+
+footer button:active {
+    background: #444;
+}
+

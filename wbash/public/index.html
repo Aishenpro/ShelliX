@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <meta name="theme-color" content="#000000">
+
+    <title>Termux Webshell</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="terminal">
+
+    <header>
+        <div class="brand">
+            <span class="brand-icon">$_</span>
+            <span>Termux</span>
+        </div>
+
+        <div class="connection">
+            <span id="status-dot"></span>
+            <span id="status">Connecting</span>
+        </div>
+    </header>
+
+    <main id="output">
+        <div class="welcome">
+            <span class="green">Welcome to Node Webshell!</span>
+            <br>
+            Persistent Bash session.
+            <br>
+            Type commands below.
+        </div>
+    </main>
+
+    <form id="terminal-form" autocomplete="off">
+        <span class="prompt">~ $</span>
+
+        <input
+            id="command"
+            type="text"
+            placeholder="Enter command..."
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            autofocus
+        >
+    </form>
+
+    <footer>
+        <button data-key="CTRL">CTRL</button>
+        <button data-key="ESC">ESC</button>
+        <button data-key="TAB">TAB</button>
+        <button data-key="UP">↑</button>
+        <button data-key="DOWN">↓</button>
+        <button data-key="LEFT">←</button>
+        <button data-key="RIGHT">→</button>
+        <button data-key="INT">^C</button>
+    </footer>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
+
